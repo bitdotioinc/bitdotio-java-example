@@ -8,11 +8,11 @@ import java.util.Properties;
 public class BitioExample {
    public static void main(String args[]) {
       Connection c = null;
-			String bitApiKey = "<your api key>";
-		  String bitDB = "sensors";
-		  String bitUser = "adam";
-			String bitHost = "db.bit.io";
-			String bitPort = "5432"; // We keep this as a string here as we are concact'ing it into the connection string
+      String bitApiKey = "<your api key>";
+      String bitDB = "sensors";
+      String bitUser = "adam";
+      String bitHost = "db.bit.io";
+      String bitPort = "5432"; // We keep this as a string here as we are concact'ing it into the connection string
       Properties props = new Properties();
       props.setProperty("sslmode","require");
       props.setProperty("user",bitUser);
