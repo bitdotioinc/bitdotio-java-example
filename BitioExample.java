@@ -8,7 +8,7 @@ import java.util.Properties;
 public class BitioExample {
    public static void main(String args[]) {
       Connection c = null;
-      String bitApiKey = "<your_bitdotio_password>";
+      String bitApiKey = "<your_bitdotio_key>"; // "Password" from connect menu
       String bitDB = "dliden.2020_Census_Reapportionment";
       String bitUser = "<your_bitdotio_username>";
       String bitHost = "db.bit.io";
