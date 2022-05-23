@@ -8,9 +8,9 @@ import java.util.Properties;
 public class BitioExample {
    public static void main(String args[]) {
       Connection c = null;
-      String bitApiKey = "<your api key>";
-      String bitDB = "sensors";
-      String bitUser = "adam";
+      String bitApiKey = "<your_bitdotio_key>"; // "Password" from connect menu
+      String bitDB = "dliden.2020_Census_Reapportionment";
+      String bitUser = "<your_bitdotio_username>";
       String bitHost = "db.bit.io";
       String bitPort = "5432"; // We keep this as a string here as we are concact'ing it into the connection string
       Properties props = new Properties();
@@ -22,7 +22,7 @@ public class BitioExample {
          c = DriverManager
             .getConnection("jdbc:postgresql://" + bitHost + ":" + bitPort + "/" + bitDB, props);
          Statement stmt = c.createStatement();
-         ResultSet rs = stmt.executeQuery("SELECT * FROM \"adam/sensors\".\"measurements\" order by datetime desc;" );
+         ResultSet rs = stmt.executeQuery("SELECT * FROM \"dliden/2020_Census_Reapportionment\".\"Historical Apportionment\" limit 10;" );
          while (rs.next()) {
              ResultSetMetaData rsmd = rs.getMetaData();
              // The ResultSet .getXXX() methods expect the column index to start at 1. 
